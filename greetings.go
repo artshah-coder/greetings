@@ -36,3 +36,11 @@ func Hellos(names []string) (map[string]string, error) {
 	}
 	return messages, nil
 }
+
+func Bye(name string) (string, error) {
+	if name == "" {
+		return name, errors.New("Empty name")
+	}
+	message := fmt.Sprintf("Bye, %s!\n", name)
+	return message, nil
+}
